@@ -190,6 +190,7 @@ tuple包含list作为元素时，list的元素可变。
 		print(`00后`)
 
 **循环**
+
 `for...in`循环
 
 	names = ['Michael','Bob','Tracy']
