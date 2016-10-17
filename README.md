@@ -141,6 +141,82 @@ Python中，采用的格式化方式和C语言中一致，用`%`实现。
 
 如果字符串中`%`是一个普通的字符，那就需要转义，用`%%`来表示一个`%`。
 
+**list和tuple**
+
+**list-列表***
+
+list是一种有序的集合，可以随时添加和删除其中的元素。
+
+	>>> classmates=['Michel','Bob','Tracy']
+	>>> classmates
+	['Michael','Bob','Tracy']
+
+变量`classmates`就是一个list。用`len()`可以得到这个list的个数。
+
+可以用索引来访问list中的元素，索引从0开始。要获取最后一个元素，还可以使用`-1`作为索引，直接获取到最后一个元素。同理，倒数第二、第三个元素可以用索引`-2`、`-3`来获取。
+
+list是一个可变的有序表，可以使用`append()`方法往list中追加元素到末尾。也可以使用`insert()`方法把元素插入到指定的位置。要删除list末尾的元素，用`pop()`方法。要删除指定位置的元素用`pop(i)`方法，`i`是索引位置。要把某个元素替换成别的元素，可以直接赋值给对应的索引位置。
+
+list里面的元素的数据类型可以不同。list的元素也可为另一个list。(list嵌套的写法类似于多维数组。)如果一个list中一个元素也没有，就是一个空的list，它的长度为0。
+
+**tuple-元组**
+
+tuple和list非常类似，但是tuple一旦初始化，就不能修改。
+
+tuple可以使用索引获取对应元素，但是不能赋值成另外的元素。**当定义tuple时，在定义的时候，tuple的元素就必须被确定下来**
+
+如果定义一个空的tuple，可以写成`()`。Python规定，定义只有一个元素的tuple时，必须加一个逗号`,`来消除歧义。(因为`()`既可以表示tuple,又可以表示数学公式中的小括号。Python在显示中也会加一个`,`避免歧义。
+
+tuple包含list作为元素时，list的元素可变。
+
+**条件判断**
+
+`if`语句。`else`后需要添加冒号`:`。`elif`是`else if`的缩写。
+
+	if <条件>:
+		<执行>
+	elif <条件>：
+		<执行>
+	else:
+		<执行>
+
+`input()`方法返回的数据类型是`str`。
+
+	s = input('birth:')
+	birth = int(s);
+	if birth < 2000:
+		print('00前')
+	else:
+		print(`00后`)
+
+**循环**
+`for...in`循环
+
+	names = ['Michael','Bob','Tracy']
+	for name in names:
+		print(name)
+
+执行这段代码，会依次打印`names`的每一个元素：
+
+	Micheal
+	Bob
+	Tracy
+
+`range()`方法，可以生成一个整数序列。`range(5)`生成的序列就是从0开始小于5的整数。
+
+`while`循环
+	
+	sum = 0
+	n = 99
+	while n>0:
+		sum = sum + n
+		n = n - 2
+	print(sum)
+
+`break`，在循环中，`break`可以提前退出循环。
+
+`continue`，在循环中，`continue`可以跳过当前这次循环，直接开始下一次循环。
+
 
 ## Tips    
 1.`.py`文件的执行：    
